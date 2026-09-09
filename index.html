@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keluarga · Galeri Futuristik</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="loader-ring"></div>
+        <p>Memuat kenangan...</p>
+    </div>
+
+    <!-- ===== NAVIGASI ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-camera-retro"></i>
+                <span>Keluarga<span class="logo-dot">.</span>space</span>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active"><i class="fas fa-home"></i> Beranda</a>
+                <a href="#gallery"><i class="fas fa-images"></i> Galeri</a>
+                <a href="#albums"><i class="fas fa-folder-open"></i> Album</a>
+                <a href="#moments"><i class="fas fa-heart"></i> Momen</a>
+                <a href="#family"><i class="fas fa-users"></i> Keluarga</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Kontak</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="search-btn" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburgerToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <input type="text" placeholder="Cari momen keluarga..." id="searchInput" />
+            <button><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-sparkles"></i> 2026 · Momen Terbaik
+            </div>
+            <h1>Kenangan Keluarga <br /><span class="gradient-text">Tak Tergantikan</span></h1>
+            <p>Setiap foto menyimpan cerita, setiap momen adalah harta. <br />Jelajahi perjalanan keluarga kami.</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn-primary">
+                    <i class="fas fa-images"></i> Lihat Galeri
+                </a>
+                <a href="#albums" class="btn-secondary">
+                    <i class="fas fa-play"></i> Tonton Cerita
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="124">0</span>
+                    <span class="stat-label">Foto</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="28">0</span>
+                    <span class="stat-label">Album</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label">Tahun Perjalanan</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-images">
+                <img src="https://picsum.photos/300/300?random=101" alt="Family" class="float-img img1" />
+                <img src="https://picsum.photos/250/250?random=102" alt="Family" class="float-img img2" />
+                <img src="https://picsum.photos/280/280?random=103" alt="Family" class="float-img img3" />
+            </div>
+            <div class="glow-orb"></div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-header">
+            <div class="section-tag">
+                <i class="fas fa-grid-2"></i> Galeri Keluarga
+            </div>
+            <h2>Momen <span class="gradient-text">Berharga</span></h2>
+            <p>Kumpulan foto-foto terbaik dari perjalanan keluarga kami</p>
+        </div>
+
+        <!-- Filter -->
+        <div class="gallery-filters" id="galleryFilters">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="liburan">Liburan</button>
+            <button class="filter-btn" data-filter="keluarga">Keluarga</button>
+            <button class="filter-btn" data-filter="acara">Acara</button>
+            <button class="filter-btn" data-filter="hobi">Hobi</button>
+            <button class="filter-btn" data-filter="kuliner">Kuliner</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid"></div>
+
+        <!-- Load More -->
+        <div class="gallery-actions">
+            <button class="btn-loadmore" id="loadMoreBtn">
+                <i class="fas fa-plus-circle"></i> Muat Lebih Banyak
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== ALBUMS SECTION ===== -->
+    <section class="albums-section" id="albums">
+        <div class="section-header">
+            <div class="section-tag">
+                <i class="fas fa-folder-open"></i> Album
+            </div>
+            <h2>Koleksi <span class="gradient-text">Album</span></h2>
+            <p>Rangkai momen dalam setiap album spesial</p>
+        </div>
+        <div class="albums-grid" id="albumsGrid"></div>
+    </section>
+
+    <!-- ===== MOMENTS / TIMELINE ===== -->
+    <section class="moments-section" id="moments">
+        <div class="section-header">
+            <div class="section-tag">
+                <i class="fas fa-clock-rotate-left"></i> Linimasa
+            </div>
+            <h2>Perjalanan <span class="gradient-text">Keluarga</span></h2>
+            <p>Setiap tahun membawa cerita baru</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- ===== FAMILY MEMBERS ===== -->
+    <section class="family-section" id="family">
+        <div class="section-header">
+            <div class="section-tag">
+                <i class="fas fa-users"></i> Anggota
+            </div>
+            <h2>Keluarga <span class="gradient-text">Kami</span></h2>
+            <p>Mereka yang membuat setiap momen berarti</p>
+        </div>
+        <div class="family-grid" id="familyGrid"></div>
+    </section>
+
+    <!-- ===== TESTIMONIAL / QUOTE ===== -->
+    <section class="testimonial-section">
+        <div class="testimonial-card">
+            <i class="fas fa-quote-left"></i>
+            <blockquote>
+                "Keluarga bukan hanya tentang darah, tapi tentang siapa yang hadir dalam setiap tawa dan air mata."
+            </blockquote>
+            <cite>— Keluarga Bahagia</cite>
+            <div class="testimonial-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT / NEWSLETTER ===== -->
+    <section class="contact-section" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Mari Berbagi <span class="gradient-text">Cerita</span></h3>
+                <p>Kirimkan momen keluarga Anda dan kami akan tampilkan di galeri ini.</p>
+                <div class="contact-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Nama Anda" required />
+                <input type="email" placeholder="Email" required />
+                <textarea placeholder="Ceritakan momen keluarga Anda..." rows="4"></textarea>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Kirim Cerita
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-camera-retro"></i>
+                    <span>Keluarga<span class="logo-dot">.</span>space</span>
+                </div>
+                <p>Menjaga kenangan keluarga dalam bingkai digital yang indah.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <a href="#home">Beranda</a>
+                    <a href="#gallery">Galeri</a>
+                    <a href="#albums">Album</a>
+                    <a href="#moments">Momen</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Lainnya</h4>
+                    <a href="#">Tentang</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Kebijakan</a>
+                    <a href="#">Kontak</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Ikuti Kami</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Keluarga.space · Dibuat dengan <i class="fas fa-heart" style="color:#ff6b6b;"></i> dan kopi</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="data/gallery-data.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
