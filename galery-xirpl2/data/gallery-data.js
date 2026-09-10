@@ -9,8 +9,8 @@ window.galleryData = {
         {
             id: 1,
             title: "Liburan ke Pantai",
-            description: "Momen indah bersama keluarga di pantai selatan, menikmati senja dan ombak.",
-            image: "https://picsum.photos/400/400?random=1",
+            description: "Momen indah bersama Teman di pantai selatan, menikmati senja dan ombak.",
+            image: "fotoku.jpg",
             category: "liburan",
             icon: "umbrella-beach"
         },
