@@ -10,7 +10,7 @@ window.galleryData = {
             id: 1,
             title: "Liburan ke Pantai",
             description: "Momen indah bersama Teman di pantai selatan, menikmati senja dan ombak.",
-            image: "data/fotoku.jpg",
+            image: "image/foto-01.jpg",
             category: "liburan",
             icon: "umbrella-beach"
         },
@@ -18,7 +18,7 @@ window.galleryData = {
             id: 2,
             title: "Makan Malam Bersama",
             description: "Acara makan malam keluarga besar dengan 15 orang, penuh tawa dan cerita.",
-            image: "https://picsum.photos/400/400?random=2",
+            image: "image/foto-02.jpg",
             category: "keluarga",
             icon: "utensils"
         },
