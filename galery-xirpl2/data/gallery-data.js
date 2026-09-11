@@ -10,7 +10,7 @@ window.galleryData = {
             id: 1,
             title: "Liburan ke Pantai",
             description: "Momen indah bersama Teman di pantai selatan, menikmati senja dan ombak.",
-            image: "data/fotoku.jpg",
+            image: "data/pantai.jpg",
             category: "liburan",
             icon: "umbrella-beach"
         },
